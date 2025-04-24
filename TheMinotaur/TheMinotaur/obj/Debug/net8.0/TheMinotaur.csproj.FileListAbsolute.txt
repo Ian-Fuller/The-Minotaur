@@ -1,0 +1,14 @@
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\TheMinotaur\TheMinotaur\obj\Debug\net8.0\TheMinotaur.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\TheMinotaur\TheMinotaur\obj\Debug\net8.0\TheMinotaur.AssemblyInfoInputs.cache
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\TheMinotaur\TheMinotaur\obj\Debug\net8.0\TheMinotaur.AssemblyInfo.cs
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\TheMinotaur\TheMinotaur\obj\Debug\net8.0\TheMinotaur.csproj.CoreCompileInputs.cache
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\TheMinotaur\TheMinotaur\bin\Debug\net8.0\TheMinotaur.exe
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\TheMinotaur\TheMinotaur\bin\Debug\net8.0\TheMinotaur.deps.json
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\TheMinotaur\TheMinotaur\bin\Debug\net8.0\TheMinotaur.runtimeconfig.json
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\TheMinotaur\TheMinotaur\bin\Debug\net8.0\TheMinotaur.dll
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\TheMinotaur\TheMinotaur\bin\Debug\net8.0\TheMinotaur.pdb
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\TheMinotaur\TheMinotaur\obj\Debug\net8.0\TheMinotaur.dll
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\TheMinotaur\TheMinotaur\obj\Debug\net8.0\refint\TheMinotaur.dll
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\TheMinotaur\TheMinotaur\obj\Debug\net8.0\TheMinotaur.pdb
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\TheMinotaur\TheMinotaur\obj\Debug\net8.0\TheMinotaur.genruntimeconfig.cache
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\TheMinotaur\TheMinotaur\obj\Debug\net8.0\ref\TheMinotaur.dll

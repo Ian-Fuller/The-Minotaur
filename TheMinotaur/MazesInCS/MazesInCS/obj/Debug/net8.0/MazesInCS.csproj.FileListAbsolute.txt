@@ -1,0 +1,14 @@
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\MazesInCS\MazesInCS\bin\Debug\net8.0\MazesInCS.exe
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\MazesInCS\MazesInCS\bin\Debug\net8.0\MazesInCS.deps.json
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\MazesInCS\MazesInCS\bin\Debug\net8.0\MazesInCS.runtimeconfig.json
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\MazesInCS\MazesInCS\bin\Debug\net8.0\MazesInCS.dll
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\MazesInCS\MazesInCS\bin\Debug\net8.0\MazesInCS.pdb
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\MazesInCS\MazesInCS\obj\Debug\net8.0\MazesInCS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\MazesInCS\MazesInCS\obj\Debug\net8.0\MazesInCS.AssemblyInfoInputs.cache
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\MazesInCS\MazesInCS\obj\Debug\net8.0\MazesInCS.AssemblyInfo.cs
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\MazesInCS\MazesInCS\obj\Debug\net8.0\MazesInCS.csproj.CoreCompileInputs.cache
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\MazesInCS\MazesInCS\obj\Debug\net8.0\MazesInCS.dll
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\MazesInCS\MazesInCS\obj\Debug\net8.0\refint\MazesInCS.dll
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\MazesInCS\MazesInCS\obj\Debug\net8.0\MazesInCS.pdb
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\MazesInCS\MazesInCS\obj\Debug\net8.0\MazesInCS.genruntimeconfig.cache
+C:\Users\ianfu\Desktop\_Projects\Programming\VisualStudio\MazesInCS\MazesInCS\obj\Debug\net8.0\ref\MazesInCS.dll
