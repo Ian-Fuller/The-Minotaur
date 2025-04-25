@@ -20,11 +20,15 @@
         private readonly Dictionary<Cell, bool> _links;
         public List<Cell> Links => _links.Keys.ToList();
 
+        // For DFS algorithm
+        public bool Visited { get; }
+
         public Cell(int row, int col)
         {
             Row = row;
             Column = col;
             _links = new Dictionary<Cell, bool>();
+            Visited = false;
         }
 
         // Linking functions
