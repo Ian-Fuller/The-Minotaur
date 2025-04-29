@@ -1,0 +1,25 @@
+﻿// DFS Algorithm // --------------------------------------------------
+
+queue = new queue
+
+start = Maze.RandomCell()
+currentCell = start
+queue.add(currentCell)
+
+do
+	unvNbrs = new list
+	nbrCount = 0
+	foreach (nbr in currentCell.Neighbors)
+		if (nbr.visited == false)
+			unvNbrs.add(nbr)
+			nbrCount++
+
+	if (nbrCount == 0)
+		currentCell = queue.goBack()
+		continue
+
+	currentNbr = unvNbrs(random(0, nbrCount))
+	queue.add(currentNbr)
+while (currentCell != start)
+
+// DFS Algorithm // --------------------------------------------------
