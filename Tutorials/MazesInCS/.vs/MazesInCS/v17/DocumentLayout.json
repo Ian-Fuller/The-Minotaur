@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\Tutorials\\MazesInCS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\tutorials\\mazesincs\\mazesincs\\pseudocode.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|solutionrelative:mazesincs\\pseudocode.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\tutorials\\mazesincs\\mazesincs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|solutionrelative:mazesincs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\tutorials\\mazesincs\\mazesincs\\algorithms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,16 +15,16 @@
       "RelativeMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|solutionrelative:mazesincs\\grid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\tutorials\\mazesincs\\mazesincs\\pseudocode.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|solutionrelative:mazesincs\\pseudocode.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\tutorials\\mazesincs\\mazesincs\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|solutionrelative:mazesincs\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\tutorials\\mazesincs\\mazesincs\\listextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|solutionrelative:mazesincs\\listextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\tutorials\\mazesincs\\mazesincs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|solutionrelative:mazesincs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,17 +34,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "PseudoCode.txt",
               "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\Tutorials\\MazesInCS\\MazesInCS\\PseudoCode.txt",
               "RelativeDocumentMoniker": "MazesInCS\\PseudoCode.txt",
               "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\Tutorials\\MazesInCS\\MazesInCS\\PseudoCode.txt",
               "RelativeToolTip": "MazesInCS\\PseudoCode.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAeAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2025-04-29T21:03:35.456Z",
               "EditorCaption": ""
@@ -57,14 +57,14 @@
               "RelativeDocumentMoniker": "MazesInCS\\Algorithms.cs",
               "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\Tutorials\\MazesInCS\\MazesInCS\\Algorithms.cs",
               "RelativeToolTip": "MazesInCS\\Algorithms.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAowEcAAAAAAAAA",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAAAEYAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-18T19:52:17.249Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ListExtensions.cs",
               "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\Tutorials\\MazesInCS\\MazesInCS\\ListExtensions.cs",
               "RelativeDocumentMoniker": "MazesInCS\\ListExtensions.cs",
@@ -82,35 +82,36 @@
               "RelativeDocumentMoniker": "MazesInCS\\Grid.cs",
               "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\Tutorials\\MazesInCS\\MazesInCS\\Grid.cs",
               "RelativeToolTip": "MazesInCS\\Grid.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAAwBwAAAAfAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAIwB4AAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-15T14:45:53.726Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Cell.cs",
               "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\Tutorials\\MazesInCS\\MazesInCS\\Cell.cs",
               "RelativeDocumentMoniker": "MazesInCS\\Cell.cs",
               "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\Tutorials\\MazesInCS\\MazesInCS\\Cell.cs",
               "RelativeToolTip": "MazesInCS\\Cell.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAQwBYAAAAcAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAA5wBcAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-15T14:18:58.496Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\Tutorials\\MazesInCS\\MazesInCS\\Program.cs",
               "RelativeDocumentMoniker": "MazesInCS\\Program.cs",
               "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\Tutorials\\MazesInCS\\MazesInCS\\Program.cs",
               "RelativeToolTip": "MazesInCS\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAoAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T14:17:22.279Z"
+              "WhenOpened": "2025-04-15T14:17:22.279Z",
+              "EditorCaption": ""
             }
           ]
         }

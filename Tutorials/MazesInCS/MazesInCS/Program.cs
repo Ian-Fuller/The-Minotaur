@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Grid maze = new Grid(10, 10);
-            maze = Algorithms.Sidewinder(maze);
+            maze = Algorithms.DepthFirst(maze);
             Console.WriteLine(maze.ToString());
         }
     }

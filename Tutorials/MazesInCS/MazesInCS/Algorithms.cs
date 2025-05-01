@@ -62,14 +62,44 @@ namespace MazesInCS
             return grid;
         }
 
-        // Pick a cell at random, place it on the queue and mark it as visited
-        // Travel to an adjacent cell that hasn't been visited yet, add it to the queue, link it to the previous cell, and mark it as visited
-        // Repeat the above process until at a cell which has no adjacent unvisited cells, then travel back up the queue until a cell with an adjacent unvisited cell is found
-        // This process should ultimately lead to the algorithm ending back up at the starting cell, which will signal the algorithm being done.
+        // function still doesn't link any cells together
+        // RandomCell() still doesn't accept a seed
         public static Grid DepthFirst(Grid grid, int seed = -1)
         {
             var rand = seed >= 0 ? new Random(seed) : new Random();
 
+            Stack<Cell> search = new Stack<Cell>();
+
+            Cell start = grid.RandomCell(seed);
+            Cell currentCell = start;
+            currentCell.Visited = true;
+            search.Push(currentCell);
+
+            do
+            {
+                List<Cell> unvNbrs = new List<Cell>();
+                foreach (Cell neighbor in currentCell.Neighbors)
+                {
+                    if (neighbor.Visited == false)
+                    {
+                        unvNbrs.Add(neighbor);
+                    }
+                }
+
+                if (unvNbrs.Count == 0)
+                {
+                    currentCell = search.Pop();
+                }
+                else
+                {
+                    Cell prevCell = currentCell;
+                    currentCell = unvNbrs[rand.Next(0, unvNbrs.Count)];
+                    currentCell.Link(prevCell);
+                    currentCell.Visited = true;
+                    search.Push(currentCell);
+                }
+            }
+            while (currentCell != start);
 
             return grid;
         }

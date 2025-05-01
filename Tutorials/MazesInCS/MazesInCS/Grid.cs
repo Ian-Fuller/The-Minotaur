@@ -26,9 +26,9 @@ namespace MazesInCS
             }
         }
 
-        public Cell RandomCell()
+        public Cell RandomCell(int seed = -1)
         {
-            var rand = new Random();
+            var rand = seed >= 0 ? new Random(seed) : new Random();
             var row = rand.Next(Rows);
             var col = rand.Next(Columns);
             var randomCell = this[row, col];

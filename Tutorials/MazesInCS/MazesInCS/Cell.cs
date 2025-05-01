@@ -21,7 +21,7 @@
         public List<Cell> Links => _links.Keys.ToList();
 
         // For DFS algorithm
-        public bool Visited { get; }
+        public bool Visited { get; set; }
 
         public Cell(int row, int col)
         {

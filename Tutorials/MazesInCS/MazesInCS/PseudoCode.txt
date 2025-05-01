@@ -1,25 +1,31 @@
 ﻿// DFS Algorithm // --------------------------------------------------
 
-queue = new queue
+// Pick a cell at random, place it on the queue and mark it as visited
+// Travel to an adjacent cell that hasn't been visited yet, add it to the queue, link it to the previous cell, and mark it as visited
+// Repeat the above process until at a cell which has no adjacent unvisited cells, then travel back up the queue until a cell with an adjacent unvisited cell is found
+// This process should ultimately lead to the algorithm ending back up at the starting cell, which will signal the algorithm being done.
+
+search = new stack
 
 start = Maze.RandomCell()
 currentCell = start
-queue.add(currentCell)
+currentCell.Visited = true
+search.push(currentCell)
 
 do
+	// Add unvisited neighbors to a list
 	unvNbrs = new list
-	nbrCount = 0
 	foreach (nbr in currentCell.Neighbors)
 		if (nbr.visited == false)
 			unvNbrs.add(nbr)
-			nbrCount++
 
-	if (nbrCount == 0)
-		currentCell = queue.goBack()
-		continue
-
-	currentNbr = unvNbrs(random(0, nbrCount))
-	queue.add(currentNbr)
+	// Determine what the next current cell should be
+	if (unvNbrs.Count == 0) // If no neighbors were found in the search...
+		currentCell = search.pop() // remove the most recently added value from the search and assign it to currentCell
+	else // If any amount of neighbors were found
+		currentCell = unvNbrs(random(0, unvNbrs.Count)) // Set currentCell to one of the neighbors at random
+		currentCell.Visited = true
+		search.push(currentCell)
 while (currentCell != start)
 
 // DFS Algorithm // --------------------------------------------------
