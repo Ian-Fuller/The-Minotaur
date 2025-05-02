@@ -14,10 +14,6 @@ namespace TheMinotaur
 
     public class Program
     {
-        // Options
-        static int mapSizeMin = 20;
-        static int mapSizeMax = 40;
-
         static void Main(string[] args)
         {
             bool running = true;

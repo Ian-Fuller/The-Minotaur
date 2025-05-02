@@ -1,22 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\TheMinotaur\\",
+  "WorkspaceRootPath": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\theminotaur\\theminotaur\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\theminotaur\\theminotaur\\maze.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|solutionrelative:theminotaur\\maze.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\theminotaur\\theminotaur\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|solutionrelative:theminotaur\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\theminotaur\\theminotaur\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|solutionrelative:theminotaur\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\theminotaur\\theminotaur\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|solutionrelative:theminotaur\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\theminotaur\\theminotaur\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|solutionrelative:theminotaur\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\theminotaur\\theminotaur\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|solutionrelative:theminotaur\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\theminotaur\\theminotaur\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\theminotaur\\theminotaur\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|solutionrelative:theminotaur\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\theminotaur\\theminotaur\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|solutionrelative:theminotaur\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +38,35 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "Tile.cs",
+              "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\Tile.cs",
+              "RelativeDocumentMoniker": "TheMinotaur\\Tile.cs",
+              "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\Tile.cs",
+              "RelativeToolTip": "TheMinotaur\\Tile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEAAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T12:47:54.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Options.cs",
+              "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\Options.cs",
+              "RelativeDocumentMoniker": "TheMinotaur\\Options.cs",
+              "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\Options.cs",
+              "RelativeToolTip": "TheMinotaur\\Options.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T12:41:01.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Entity.cs",
-              "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\TheMinotaur\\TheMinotaur\\Entity.cs",
+              "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\Entity.cs",
               "RelativeDocumentMoniker": "TheMinotaur\\Entity.cs",
-              "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\TheMinotaur\\TheMinotaur\\Entity.cs",
+              "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\Entity.cs",
               "RelativeToolTip": "TheMinotaur\\Entity.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -42,40 +74,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Map.cs",
-              "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\TheMinotaur\\TheMinotaur\\Map.cs",
-              "RelativeDocumentMoniker": "TheMinotaur\\Map.cs",
-              "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\TheMinotaur\\TheMinotaur\\Map.cs",
-              "RelativeToolTip": "TheMinotaur\\Map.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAwAAAA",
+              "DocumentIndex": 0,
+              "Title": "Maze.cs",
+              "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\Maze.cs",
+              "RelativeDocumentMoniker": "TheMinotaur\\Maze.cs",
+              "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\Maze.cs",
+              "RelativeToolTip": "TheMinotaur\\Maze.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T18:34:04.473Z"
+              "WhenOpened": "2025-04-10T18:34:04.473Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "World.cs",
-              "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\TheMinotaur\\TheMinotaur\\World.cs",
+              "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\World.cs",
               "RelativeDocumentMoniker": "TheMinotaur\\World.cs",
-              "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\TheMinotaur\\TheMinotaur\\World.cs",
+              "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\World.cs",
               "RelativeToolTip": "TheMinotaur\\World.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAPAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-10T18:29:31.348Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\TheMinotaur\\TheMinotaur\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\Program.cs",
               "RelativeDocumentMoniker": "TheMinotaur\\Program.cs",
-              "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\TheMinotaur\\TheMinotaur\\Program.cs",
+              "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\Program.cs",
               "RelativeToolTip": "TheMinotaur\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T15:51:37.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T15:51:37.429Z"
             }
           ]
         }

@@ -4,8 +4,8 @@ namespace TheMinotaur
 {
     internal class World
     {
-        Dictionary<string, Map> maps;
-        public Map currentMap;
+        Dictionary<string, Maze> maps;
+        public Maze currentMap;
         int mapX;
         int mapY;
 
@@ -13,8 +13,8 @@ namespace TheMinotaur
         {
             mapX = 0;
             mapY = 0;
-            currentMap = new Map();
-            maps = new Dictionary<string, Map>();
+            currentMap = new Maze();
+            maps = new Dictionary<string, Maze>();
             maps.Add($"{mapX}, {mapY}", currentMap);
         }
     }
