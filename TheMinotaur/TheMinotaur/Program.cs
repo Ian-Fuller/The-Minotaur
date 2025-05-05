@@ -26,7 +26,7 @@ namespace TheMinotaur
                 {
                     case State.Game:
                         World gameWorld = new World();
-                        gameWorld.currentMap.GenerateMap(mapSizeMin, mapSizeMax);
+                        gameWorld.currentMap.GenerateMaze();
                         bool gameLoop = true;
                         while (gameLoop)
                         {

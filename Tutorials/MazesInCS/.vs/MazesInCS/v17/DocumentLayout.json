@@ -34,20 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PseudoCode.txt",
-              "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\Tutorials\\MazesInCS\\MazesInCS\\PseudoCode.txt",
-              "RelativeDocumentMoniker": "MazesInCS\\PseudoCode.txt",
-              "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\Tutorials\\MazesInCS\\MazesInCS\\PseudoCode.txt",
-              "RelativeToolTip": "MazesInCS\\PseudoCode.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-04-29T21:03:35.456Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -80,10 +68,22 @@
               "RelativeDocumentMoniker": "MazesInCS\\Grid.cs",
               "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\Tutorials\\MazesInCS\\MazesInCS\\Grid.cs",
               "RelativeToolTip": "MazesInCS\\Grid.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAAYwAgAAAAhAAAA",
+              "ViewState": "AQIAACUAAAAAAAAAAAAcwE8AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-15T14:45:53.726Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PseudoCode.txt",
+              "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\Tutorials\\MazesInCS\\MazesInCS\\PseudoCode.txt",
+              "RelativeDocumentMoniker": "MazesInCS\\PseudoCode.txt",
+              "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\Tutorials\\MazesInCS\\MazesInCS\\PseudoCode.txt",
+              "RelativeToolTip": "MazesInCS\\PseudoCode.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-04-29T21:03:35.456Z"
             },
             {
               "$type": "Document",
@@ -95,8 +95,7 @@
               "RelativeToolTip": "MazesInCS\\Cell.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAAAkwC4AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T14:18:58.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T14:18:58.496Z"
             },
             {
               "$type": "Document",
@@ -108,8 +107,7 @@
               "RelativeToolTip": "MazesInCS\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T14:17:22.279Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T14:17:22.279Z"
             }
           ]
         }
