@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|solutionrelative:mazesincs\\grid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\tutorials\\mazesincs\\mazesincs\\algorithms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|solutionrelative:mazesincs\\algorithms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\tutorials\\mazesincs\\mazesincs\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|solutionrelative:mazesincs\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\tutorials\\mazesincs\\mazesincs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|solutionrelative:mazesincs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\tutorials\\mazesincs\\mazesincs\\algorithms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|solutionrelative:mazesincs\\algorithms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74EF9AB7-ECE4-468B-B34D-7B2DEF3E5D12}|MazesInCS\\MazesInCS.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\tutorials\\mazesincs\\mazesincs\\pseudocode.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -38,15 +38,16 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Algorithms.cs",
               "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\Tutorials\\MazesInCS\\MazesInCS\\Algorithms.cs",
               "RelativeDocumentMoniker": "MazesInCS\\Algorithms.cs",
               "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\Tutorials\\MazesInCS\\MazesInCS\\Algorithms.cs",
               "RelativeToolTip": "MazesInCS\\Algorithms.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAAAEYAAAAzAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAA9wGIAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T19:52:17.249Z"
+              "WhenOpened": "2025-04-18T19:52:17.249Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -68,7 +69,7 @@
               "RelativeDocumentMoniker": "MazesInCS\\Grid.cs",
               "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\Tutorials\\MazesInCS\\MazesInCS\\Grid.cs",
               "RelativeToolTip": "MazesInCS\\Grid.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAcwE8AAAAMAAAA",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAqwIMAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-15T14:45:53.726Z",
               "EditorCaption": ""
@@ -87,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Cell.cs",
               "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\Tutorials\\MazesInCS\\MazesInCS\\Cell.cs",
               "RelativeDocumentMoniker": "MazesInCS\\Cell.cs",
@@ -99,7 +100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\Tutorials\\MazesInCS\\MazesInCS\\Program.cs",
               "RelativeDocumentMoniker": "MazesInCS\\Program.cs",

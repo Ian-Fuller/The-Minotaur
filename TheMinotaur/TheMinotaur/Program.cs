@@ -26,10 +26,11 @@ namespace TheMinotaur
                 {
                     case State.Game:
                         World gameWorld = new World();
-                        gameWorld.currentMap.GenerateMaze();
                         bool gameLoop = true;
                         while (gameLoop)
                         {
+                            gameWorld.currentMap.PrintMap();
+
                             char input = Console.ReadKey().KeyChar;
                             switch (input)
                             {

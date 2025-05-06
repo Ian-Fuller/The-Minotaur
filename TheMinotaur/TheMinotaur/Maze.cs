@@ -1,4 +1,6 @@
-﻿namespace TheMinotaur
+﻿using System.Text;
+
+namespace TheMinotaur
 {
     internal class Maze
     {
@@ -13,7 +15,7 @@
         {
             Random rand = new Random();
             rows = rand.Next(Options.mapMin, Options.mapMax);
-            cols = rand.Next(Options.mapMin, Options.mapMax);
+            cols = rand.Next(Options.mapMin, Options.mapMax) * 2;
             grid = new List<List<Cell>>();
             tiles = new List<List<char>>();
             entities = new List<List<Entity>>();
@@ -76,7 +78,7 @@
             Random rand = new Random();
 
             // Queue the DFS search will use to navigate
-            Stack<Cell> search = new Stack<Cell> ();
+            Stack<Cell> search = new Stack<Cell>();
 
             // Initialize variables for the do while loop
             Cell start = this[rand.Next(0, rows), rand.Next(0, cols)];
@@ -115,7 +117,35 @@
 
         public void PrintMap()
         {
+            StringBuilder output = new StringBuilder();
 
+            // Upper border
+            output.Append("╔");
+            for (int col = 0; col < cols; col++)
+            {
+                output.Append("═╦");
+            }
+            output.Append("\n");
+
+            // Main body
+            foreach (List<Cell> row in grid) // For each row
+            {
+                output.Append("║"); // Left border
+                foreach (Cell cell in row)
+                {
+                    output.Append(cell.IsLinked(cell.east) ? "  " : " ║");
+                }
+                output.Append("\n");
+
+                output.Append("╠"); // Left border
+                foreach (Cell cell in row)
+                {
+                    output.Append(cell.IsLinked(cell.south) ? " ╬" : "═╬");
+                }
+                output.Append("\n");
+            }
+
+            Console.WriteLine(output.ToString());
         }
     }
 }
