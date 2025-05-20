@@ -1,4 +1,15 @@
-﻿using System.Text;
+﻿/*
+There is an issue with the maze that gets printed to the screen
+ - The cells in the first column link between each other, but will not link with the cells in column 2 and vice versa
+ - The cells in the final column also seem to link to cells outside of the grid
+ - There are a few points in the cde where this problem could be occuring:
+    - The cells aren't being assigned neighbors correctly - Likely a flase assumption, as printing out the number of neighbors for each cell results in 2 for the corners, 3 for the edges, and 4 for all else
+    - The maze generation uses the grid data improperly
+    - The maze doesn't get printed properly - Probably isn't the case
+ - I believe I have found the problem. There seems to be an issue with the way the DFS algorithm finds neighbors, as the search is able to teleport through walls, but still stays adjacent to the search. There could also be a problem with the way cells are linked in the search
+*/
+
+using System.Text;
 
 namespace TheMinotaur
 {
@@ -77,7 +88,7 @@ namespace TheMinotaur
             // Generate maze using DFS algorithm
             Random rand = new Random();
 
-            // Queue the DFS search will use to navigate
+            // Queue that the DFS search will use to navigate
             Stack<Cell> search = new Stack<Cell>();
 
             // Initialize variables for the do while loop
@@ -111,6 +122,8 @@ namespace TheMinotaur
                     currentCell.visited = true;
                     search.Push(currentCell);
                 }
+
+                PrintMap();
             }
             while (currentCell != start); // Loop ends once the DFS returns to the start
         }
