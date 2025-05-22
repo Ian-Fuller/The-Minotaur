@@ -1,19 +1,4 @@
-﻿/*
-There is an issue with the maze that gets printed to the screen
- - The cells in the first column link between each other, but will not link with the cells in column 2 and vice versa
- - The cells in the final column also seem to link to cells outside of the grid
- - There are a few points in the cde where this problem could be occuring:
-    - The cells aren't being assigned neighbors correctly - Likely a flase assumption, as printing out the number of neighbors for each cell results in 2 for the corners, 3 for the edges, and 4 for all else
-    - The maze generation uses the grid data improperly
-    - The maze doesn't get printed properly - Probably isn't the case
- - I believe I have found the problem. There seems to be an issue with the way the DFS algorithm finds neighbors, as the search is able to teleport through walls, but still stays adjacent to the search. There could also be a problem with the way cells are linked in the search
-    - Maybe unvNbrs isn't being cleared properly, which doesn't make sense since it goes out of scope for each iteration of the loop
-    - The issue doesn't seem to have to do with the search stack, as the teleportation occursi in the else block
-    - It could be that the neighbors aren't being assigned properly, the alorithm is using the neighbors of a previous cell, or the cells aren't being linked properly
- - I have found the solution: I had East and West mixed up in the neighbor assignment loop
-*/
-
-using System.Text;
+﻿using System.Text;
 
 namespace TheMinotaur
 {
@@ -21,10 +6,13 @@ namespace TheMinotaur
     {
         int rows;
         int cols;
+        int top;
+        int left;
 
         List<List<Cell>> grid; // Grid system that is used to generate the maze. This isn't representative of all the tiles the player will be able to traverse across
         List<List<Entity>> entities; // Player, Monsters, Obstacles, and Items
-        List<List<char>> tiles; // Text to be printed to the user that is generated using the above two variables
+        //List<List<char>> tiles; // Text to be printed to the user that is generated using the above two variables
+        char[,] tiles; // Text to be printed to the user that is generated using the above two variables
 
         public Maze()
         {
@@ -32,9 +20,13 @@ namespace TheMinotaur
             rows = rand.Next(Options.mapMin, Options.mapMax);
             cols = rand.Next(Options.mapMin, Options.mapMax) * 2;
             grid = new List<List<Cell>>();
-            tiles = new List<List<char>>();
+            //tiles = new List<List<char>>();
+            top = rows * 2 + 1;
+            left = cols * 2 + 2;
+            tiles = new char[top, left];
             entities = new List<List<Entity>>();
             GenerateMaze();
+            GenerateTiles();
         }
 
         // Access single cell by index
@@ -126,43 +118,82 @@ namespace TheMinotaur
                     currentCell.visited = true;
                     search.Push(currentCell);
                 }
-
-                PrintMap();
             }
             while (currentCell != start); // Loop ends once the DFS returns to the start
         }
 
-        public void PrintMap()
+        public void GenerateTiles()
         {
-            StringBuilder output = new StringBuilder();
-
-            // Upper border
-            output.Append("╔");
-            for (int col = 0; col < cols; col++)
+            // Top border
+            for (int l = 0; l < rows; l++)
             {
-                output.Append("═╦");
+                tiles[0, l] = '╬';
             }
-            output.Append("\n");
 
             // Main body
-            foreach (List<Cell> row in grid) // For each row
+            for (int t = 1; t < top; t+=2) // top, as in from the top // starts at 1 because of the top border
             {
-                output.Append("║"); // Left border
-                foreach (Cell cell in row)
-                {
-                    output.Append(cell.IsLinked(cell.east) ? "  " : " ║");
-                }
-                output.Append("\n");
+                tiles[t, 0] = '╬';
 
-                output.Append("╠"); // Left border
-                foreach (Cell cell in row)
+                for (int l = 1; l < left; l += 2) // left, as in from the left // starts at 1 because of the left border
                 {
-                    output.Append(cell.IsLinked(cell.south) ? " ╬" : "═╬");
+                    tiles[t - 1, l - 1] = ' ';
+                    tiles[t - 1, l] = '╬';
                 }
-                output.Append("\n");
+
+                for (int l = 1; l < left; l += 2) // left, as in from the left
+                {
+                    tiles[t, l - 1] = '╬';
+                    tiles[t, l] = '╬';
+                }
+
+                tiles[t, left] = '\n';
+            }
+        }
+
+        public void PrintMap()
+        {
+            //StringBuilder output = new StringBuilder();
+
+            //// Upper border
+            //output.Append("╔");
+            //for (int col = 0; col < cols; col++)
+            //{
+            //    output.Append("═╦");
+            //}
+            //output.Append("\n");
+
+            //// Main body
+            //foreach (List<Cell> row in grid) // For each row
+            //{
+            //    output.Append("║"); // Left border
+            //    foreach (Cell cell in row)
+            //    {
+            //        output.Append(cell.IsLinked(cell.east) ? "  " : " ║");
+            //    }
+            //    output.Append("\n");
+
+            //    output.Append("╠"); // Left border
+            //    foreach (Cell cell in row)
+            //    {
+            //        output.Append(cell.IsLinked(cell.south) ? " ╬" : "═╬");
+            //    }
+            //    output.Append("\n");
+            //}
+
+            //Console.WriteLine(output.ToString());
+
+            StringBuilder output = new StringBuilder();
+
+            for (int t = 0; t < rows; t++)
+            {
+                for (int l = 0; l < rows; l++)
+                {
+                    output.Append(tiles[t, l]);
+                }
             }
 
-            Console.WriteLine(output.ToString());
+            Console.Write(output.ToString());
         }
     }
 }
