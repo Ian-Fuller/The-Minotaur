@@ -7,6 +7,10 @@ There is an issue with the maze that gets printed to the screen
     - The maze generation uses the grid data improperly
     - The maze doesn't get printed properly - Probably isn't the case
  - I believe I have found the problem. There seems to be an issue with the way the DFS algorithm finds neighbors, as the search is able to teleport through walls, but still stays adjacent to the search. There could also be a problem with the way cells are linked in the search
+    - Maybe unvNbrs isn't being cleared properly, which doesn't make sense since it goes out of scope for each iteration of the loop
+    - The issue doesn't seem to have to do with the search stack, as the teleportation occursi in the else block
+    - It could be that the neighbors aren't being assigned properly, the alorithm is using the neighbors of a previous cell, or the cells aren't being linked properly
+ - I have found the solution: I had East and West mixed up in the neighbor assignment loop
 */
 
 using System.Text;
@@ -81,8 +85,8 @@ namespace TheMinotaur
 
                 cell.north = this[row - 1, col];
                 cell.south = this[row + 1, col];
-                cell.east = this[row, col - 1];
-                cell.west = this[row, col + 1];
+                cell.east = this[row, col + 1];
+                cell.west = this[row, col - 1];
             }
 
             // Generate maze using DFS algorithm
