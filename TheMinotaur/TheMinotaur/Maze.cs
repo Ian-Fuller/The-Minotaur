@@ -4,15 +4,14 @@ namespace TheMinotaur
 {
     internal class Maze
     {
-        int rows;
-        int cols;
-        int top;
-        int left;
+        private int rows;
+        private int cols;
+        private int top;
+        private int left;
 
-        List<List<Cell>> grid; // Grid system that is used to generate the maze. This isn't representative of all the tiles the player will be able to traverse across
-        List<List<Entity>> entities; // Player, Monsters, Obstacles, and Items
-        //List<List<char>> tiles; // Text to be printed to the user that is generated using the above two variables
-        char[,] tiles; // Text to be printed to the user that is generated using the above two variables
+        private List<List<Cell>> grid; // Grid system that is used to generate the maze. This isn't representative of all the tiles the player will be able to traverse across
+        private List<List<Entity>> entities; // Player, Monsters, Obstacles, and Items
+        private char[,] tiles; // Text to be printed to the user that is generated using the above two variables
 
         public Maze()
         {
@@ -20,13 +19,13 @@ namespace TheMinotaur
             rows = rand.Next(Options.mapMin, Options.mapMax);
             cols = rand.Next(Options.mapMin, Options.mapMax) * 2;
             grid = new List<List<Cell>>();
-            //tiles = new List<List<char>>();
-            top = rows * 2 + 1;
-            left = cols * 2 + 2;
+            top = rows * 2 + 1; // 2 chars for each row + the top border
+            left = cols * 2 + 2; // 2 chars for each column + the left border + the newline character
             tiles = new char[top, left];
             entities = new List<List<Entity>>();
             GenerateMaze();
-            GenerateTiles();
+            GenerateMazeTiles();
+            CleanMaze();
         }
 
         // Access single cell by index
@@ -42,7 +41,7 @@ namespace TheMinotaur
             }
         }
         // Iterate over all cells
-        public IEnumerable<Cell> Cells
+        private IEnumerable<Cell> Cells
         {
             get
             {
@@ -56,7 +55,8 @@ namespace TheMinotaur
             }
         }
 
-        public void GenerateMaze()
+        // Generates a grid of cells, and uses that grid to generate a maze using a Depth-First Search algorithm
+        private void GenerateMaze()
         {
             // Populate the grid with cells
             for (int r = 0; r < rows; r++)
@@ -122,72 +122,175 @@ namespace TheMinotaur
             while (currentCell != start); // Loop ends once the DFS returns to the start
         }
 
-        public void GenerateTiles()
+        // Uses the data created by GenrateMaze() to create a map of tiles that can be displayed to the player so they can move around in it
+        private void GenerateMazeTiles()
         {
-            // Top border
-            for (int l = 0; l < rows; l++)
+            StringBuilder output = new StringBuilder();
+
+            // Upper border
+            output.Append("╬");
+            for (int col = 0; col < cols; col++)
             {
-                tiles[0, l] = '╬';
+                output.Append("╬╬");
             }
+            output.Append("\n");
 
             // Main body
-            for (int t = 1; t < top; t+=2) // top, as in from the top // starts at 1 because of the top border
+            foreach (List<Cell> row in grid) // For each row
             {
-                tiles[t, 0] = '╬';
-
-                for (int l = 1; l < left; l += 2) // left, as in from the left // starts at 1 because of the left border
+                output.Append("╬"); // Left border
+                foreach (Cell cell in row)
                 {
-                    tiles[t - 1, l - 1] = ' ';
-                    tiles[t - 1, l] = '╬';
+                    output.Append(cell.IsLinked(cell.east) ? "  " : " ╬");
                 }
+                output.Append("\n");
 
-                for (int l = 1; l < left; l += 2) // left, as in from the left
+                output.Append("╬"); // Left border
+                foreach (Cell cell in row)
                 {
-                    tiles[t, l - 1] = '╬';
-                    tiles[t, l] = '╬';
+                    output.Append(cell.IsLinked(cell.south) ? " ╬" : "╬╬");
                 }
+                output.Append("\n");
+            }
 
-                tiles[t, left] = '\n';
+            int i = 0;
+            for (int t = 0; t < top; t++)
+            {
+                for (int l = 0; l < left; l++)
+                {
+                    tiles[t, l] = output[i++]; 
+                }
             }
         }
 
-        public void PrintMap()
+        // Fills tiles[,] with structures and entities
+        private void PopulateMaze()
         {
-            //StringBuilder output = new StringBuilder();
 
-            //// Upper border
-            //output.Append("╔");
-            //for (int col = 0; col < cols; col++)
-            //{
-            //    output.Append("═╦");
-            //}
-            //output.Append("\n");
+        }
 
-            //// Main body
-            //foreach (List<Cell> row in grid) // For each row
-            //{
-            //    output.Append("║"); // Left border
-            //    foreach (Cell cell in row)
-            //    {
-            //        output.Append(cell.IsLinked(cell.east) ? "  " : " ║");
-            //    }
-            //    output.Append("\n");
+        // Changes the wall characters in tiles[,] so they flow with one another, instead of them all being ╬
+        private void CleanMaze()
+        {
+            for (int t = 0; t < top; t++)
+            {
+                for (int l = 0; l < left; l++)
+                {
+                    if (tiles[t, l] == '╬') {
+                        bool north = false;
+                        bool south = false;
+                        bool east = false;
+                        bool west = false;
 
-            //    output.Append("╠"); // Left border
-            //    foreach (Cell cell in row)
-            //    {
-            //        output.Append(cell.IsLinked(cell.south) ? " ╬" : "═╬");
-            //    }
-            //    output.Append("\n");
-            //}
+                        try
+                        {
+                            if (tiles[t - 1, l] != ' ' && tiles[t - 1, l] != '\n')
+                            {
+                                north = true;
+                            }
+                        }
+                        catch { }
 
-            //Console.WriteLine(output.ToString());
+                        try
+                        {
+                            if (tiles[t + 1, l] != ' ' && tiles[t + 1, l] != '\n')
+                            {
+                                south = true;
+                            }
+                        }
+                        catch { }
 
+                        try
+                        {
+                            if (tiles[t, l + 1] != ' ' && tiles[t, l + 1] != '\n')
+                            {
+                                east = true;
+                            }
+                        }
+                        catch { }
+
+                        try
+                        {
+                            if (tiles[t, l - 1] != ' ' && tiles[t, l - 1] != '\n')
+                            {
+                                west = true;
+                            }
+                        }
+                        catch { }
+
+                        if (north && south) // has two neighbors opposite of eachother (north-south)
+                        {
+                            tiles[t, l] = '║';
+                        }
+                        if (west && east) // has two neighbors opposite of eachother (west-east)
+                        {
+                            tiles[t, l] = '═';
+                        }
+                        if (north) // has one neighbor; this and the following if else statements come after the first two, as they occur less frequently
+                        {
+                            tiles[t, l] = '║';
+                        }
+                        if (south) // has one neighbor
+                        {
+                            tiles[t, l] = '║';
+                        }
+                        if (east) // has one neighbor
+                        {
+                            tiles[t, l] = '═';
+                        }
+                        if (west) // has one neighbor
+                        {
+                            tiles[t, l] = '═';
+                        }
+                        if (north && east) // has two neighbors (north-east)
+                        {
+                            tiles[t, l] = '╚';
+                        }
+                        if (east && south) // has two neighbors (east-south)
+                        {
+                            tiles[t, l] = '╔';
+                        }
+                        if (south && west) // has two neighbors (south-west)
+                        {
+                            tiles[t, l] = '╗';
+                        }
+                        if (west && north) // has two neighbors (west-north)
+                        {
+                            tiles[t, l] = '╝';
+                        }
+                        if (north && east && south) // has three neighbors (north-east-south)
+                        {
+                            tiles[t, l] = '╠';
+                        }
+                        if (east && south && west) // has three neighbors (east-south-west)
+                        {
+                            tiles[t, l] = '╦';
+                        }
+                        if (south && west && north) // has three neighbors (south-west-north)
+                        {
+                            tiles[t, l] = '╣';
+                        }
+                        if (west && north && east) // has three neighbors (west-north-east)
+                        {
+                            tiles[t, l] = '╩';
+                        }
+                        if (north && south && east && west) // has all four neighbors
+                        {
+                            tiles[t, l] = '╬';
+                        }
+                    }
+                }
+            }
+        }
+
+        // Prints tiles[,] to the console
+        public void PrintMaze()
+        {
             StringBuilder output = new StringBuilder();
 
-            for (int t = 0; t < rows; t++)
+            for (int t = 0; t < top; t++)
             {
-                for (int l = 0; l < rows; l++)
+                for (int l = 0; l < left; l++)
                 {
                     output.Append(tiles[t, l]);
                 }

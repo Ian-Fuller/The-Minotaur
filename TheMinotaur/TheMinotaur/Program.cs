@@ -1,6 +1,8 @@
 ﻿/*
 TO-DO:
- - Learn out how to generate mazes
+ - (DONE) Learn out how to generate mazes
+ - Create entities and the player
+ - Make CleanMaze() more efficient
 */
 
 namespace TheMinotaur
@@ -29,7 +31,7 @@ namespace TheMinotaur
                         bool gameLoop = true;
                         while (gameLoop)
                         {
-                            gameWorld.currentMap.PrintMap();
+                            gameWorld.currentMap.PrintMaze();
 
                             char input = Console.ReadKey().KeyChar;
                             switch (input)
