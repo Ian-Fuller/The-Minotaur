@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Numerics;
+using System.Text;
 
 namespace TheMinotaur
 {
@@ -172,21 +173,38 @@ namespace TheMinotaur
         // Changes the wall characters in tiles[,] so they flow with one another, instead of them all being ╬
         private void CleanMaze()
         {
+            char[] boxDrawing = 
+            {
+                ' ', //  0 - none (shouldn't be possible)
+                '║', //  1 - north
+                '║', //  2 - south
+                '║', //  3 - north & south
+                '═', //  4 - east
+                '╚', //  5 - north & east
+                '╔', //  6 - east & south
+                '╠', //  7 - north, east, & south
+                '═', //  8 - west
+                '╝', //  9 - north & west
+                '╗', // 10 - south & west
+                '╣', // 11 - north, south, & west
+                '═', // 12 - east & west
+                '╩', // 13 - north, east, & west
+                '╦', // 14 - east, south, & west
+                '╬'  // 15 - all
+            };
+
             for (int t = 0; t < top; t++)
             {
                 for (int l = 0; l < left; l++)
                 {
                     if (tiles[t, l] == '╬') {
-                        bool north = false;
-                        bool south = false;
-                        bool east = false;
-                        bool west = false;
+                        int total = 0;
 
                         try
                         {
                             if (tiles[t - 1, l] != ' ' && tiles[t - 1, l] != '\n')
                             {
-                                north = true;
+                                total += 1;
                             }
                         }
                         catch { }
@@ -195,7 +213,7 @@ namespace TheMinotaur
                         {
                             if (tiles[t + 1, l] != ' ' && tiles[t + 1, l] != '\n')
                             {
-                                south = true;
+                                total += 2;
                             }
                         }
                         catch { }
@@ -204,7 +222,7 @@ namespace TheMinotaur
                         {
                             if (tiles[t, l + 1] != ' ' && tiles[t, l + 1] != '\n')
                             {
-                                east = true;
+                                total += 4;
                             }
                         }
                         catch { }
@@ -213,71 +231,12 @@ namespace TheMinotaur
                         {
                             if (tiles[t, l - 1] != ' ' && tiles[t, l - 1] != '\n')
                             {
-                                west = true;
+                                total += 8;
                             }
                         }
                         catch { }
 
-                        if (north && south) // has two neighbors opposite of eachother (north-south)
-                        {
-                            tiles[t, l] = '║';
-                        }
-                        if (west && east) // has two neighbors opposite of eachother (west-east)
-                        {
-                            tiles[t, l] = '═';
-                        }
-                        if (north) // has one neighbor; this and the following if else statements come after the first two, as they occur less frequently
-                        {
-                            tiles[t, l] = '║';
-                        }
-                        if (south) // has one neighbor
-                        {
-                            tiles[t, l] = '║';
-                        }
-                        if (east) // has one neighbor
-                        {
-                            tiles[t, l] = '═';
-                        }
-                        if (west) // has one neighbor
-                        {
-                            tiles[t, l] = '═';
-                        }
-                        if (north && east) // has two neighbors (north-east)
-                        {
-                            tiles[t, l] = '╚';
-                        }
-                        if (east && south) // has two neighbors (east-south)
-                        {
-                            tiles[t, l] = '╔';
-                        }
-                        if (south && west) // has two neighbors (south-west)
-                        {
-                            tiles[t, l] = '╗';
-                        }
-                        if (west && north) // has two neighbors (west-north)
-                        {
-                            tiles[t, l] = '╝';
-                        }
-                        if (north && east && south) // has three neighbors (north-east-south)
-                        {
-                            tiles[t, l] = '╠';
-                        }
-                        if (east && south && west) // has three neighbors (east-south-west)
-                        {
-                            tiles[t, l] = '╦';
-                        }
-                        if (south && west && north) // has three neighbors (south-west-north)
-                        {
-                            tiles[t, l] = '╣';
-                        }
-                        if (west && north && east) // has three neighbors (west-north-east)
-                        {
-                            tiles[t, l] = '╩';
-                        }
-                        if (north && south && east && west) // has all four neighbors
-                        {
-                            tiles[t, l] = '╬';
-                        }
+                        tiles[t, l] = boxDrawing[total];
                     }
                 }
             }
