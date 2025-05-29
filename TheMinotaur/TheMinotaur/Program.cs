@@ -2,6 +2,8 @@
 TO-DO:
  - (DONE) Learn out how to generate mazes
  - Create entities and the player
+ - Write PopulateMaze()
+ - Add a Structure class
  - Make CleanMaze() more efficient
 */
 

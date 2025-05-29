@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿using System.Linq.Expressions;
+using System.Numerics;
 using System.Text;
 
 namespace TheMinotaur
@@ -11,7 +12,7 @@ namespace TheMinotaur
         private int left;
 
         private List<List<Cell>> grid; // Grid system that is used to generate the maze. This isn't representative of all the tiles the player will be able to traverse across
-        private List<List<Entity>> entities; // Player, Monsters, Obstacles, and Items
+        private Dictionary<string, Entity> entities; // Player, Monsters, Obstacles, and Items
         private char[,] tiles; // Text to be printed to the user that is generated using the above two variables
 
         public Maze()
@@ -23,9 +24,10 @@ namespace TheMinotaur
             top = rows * 2 + 1; // 2 chars for each row + the top border
             left = cols * 2 + 2; // 2 chars for each column + the left border + the newline character
             tiles = new char[top, left];
-            entities = new List<List<Entity>>();
+            entities = new Dictionary<string, Entity>();
             GenerateMaze();
             GenerateMazeTiles();
+            PopulateMaze();
             CleanMaze();
         }
 
@@ -129,27 +131,27 @@ namespace TheMinotaur
             StringBuilder output = new StringBuilder();
 
             // Upper border
-            output.Append("╬");
+            output.Append("█");
             for (int col = 0; col < cols; col++)
             {
-                output.Append("╬╬");
+                output.Append("██");
             }
             output.Append("\n");
 
             // Main body
             foreach (List<Cell> row in grid) // For each row
             {
-                output.Append("╬"); // Left border
+                output.Append("█"); // Left border
                 foreach (Cell cell in row)
                 {
-                    output.Append(cell.IsLinked(cell.east) ? "  " : " ╬");
+                    output.Append(cell.IsLinked(cell.east) ? "  " : " █");
                 }
                 output.Append("\n");
 
-                output.Append("╬"); // Left border
+                output.Append("█"); // Left border
                 foreach (Cell cell in row)
                 {
-                    output.Append(cell.IsLinked(cell.south) ? " ╬" : "╬╬");
+                    output.Append(cell.IsLinked(cell.south) ? " █" : "██");
                 }
                 output.Append("\n");
             }
@@ -167,7 +169,22 @@ namespace TheMinotaur
         // Fills tiles[,] with structures and entities
         private void PopulateMaze()
         {
+            Player player = new Player();
 
+            Random rand = new Random();
+
+            bool running = true;
+            while (running)
+            {
+                int t = (rand.Next(0, top));
+                int l = (rand.Next(0, left));
+
+                if (tiles[t, l] == ' ')
+                {
+                    entities[t.ToString() + ", " + l.ToString()] = player;
+                    running = false;
+                }
+            }
         }
 
         // Changes the wall characters in tiles[,] so they flow with one another, instead of them all being ╬
@@ -197,7 +214,7 @@ namespace TheMinotaur
             {
                 for (int l = 0; l < left; l++)
                 {
-                    if (tiles[t, l] == '╬') {
+                    if (tiles[t, l] == '█') {
                         int total = 0;
 
                         try
@@ -246,6 +263,13 @@ namespace TheMinotaur
         public void PrintMaze()
         {
             StringBuilder output = new StringBuilder();
+
+            foreach (KeyValuePair<string, Entity> entity in entities)
+            {
+                int t = int.Parse(entity.Key.Split(", ")[0]);
+                int l = int.Parse(entity.Key.Split(", ")[1]);
+                tiles[t, l] = entity.Value.tile;
+            }
 
             for (int t = 0; t < top; t++)
             {
