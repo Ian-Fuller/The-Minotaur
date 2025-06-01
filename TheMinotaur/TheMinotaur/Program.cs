@@ -18,10 +18,14 @@ namespace TheMinotaur
 
     public class Program
     {
+        static bool running;
+        static bool gameLoop;
+        static State programState;
+
         static void Main(string[] args)
         {
-            bool running = true;
-            State programState = State.MainMenu;
+            running = true;
+            programState = State.MainMenu;
 
             while (running)
             {
@@ -30,23 +34,14 @@ namespace TheMinotaur
                 {
                     case State.Game:
                         World gameWorld = new World();
-                        bool gameLoop = true;
+                        gameLoop = true;
                         while (gameLoop)
                         {
+                            Console.SetCursorPosition(0, 0);
                             gameWorld.currentMap.PrintMaze();
 
-                            char input = Console.ReadKey().KeyChar;
-                            switch (input)
-                            {
-                                case 'h': // Open manual
-                                    break;
-                                case 'x': // Exit options state, returning to main menu
-                                    programState = State.MainMenu;
-                                    gameLoop = false;
-                                    break;
-                                default:
-                                    break;
-                            }
+                            // This block doesn't get player input, as thet is handled by the player object
+                            gameWorld.currentMap.Loop();
                         }
                         break;
                     case State.MainMenu:
@@ -89,6 +84,12 @@ namespace TheMinotaur
                         break;
                 }
             }
+        }
+
+        public static void ExitGame()
+        {
+            programState = State.MainMenu;
+            gameLoop = false;
         }
     }
 }

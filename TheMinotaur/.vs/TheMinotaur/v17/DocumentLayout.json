@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|solutionrelative:theminotaur\\maze.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\theminotaur\\theminotaur\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|solutionrelative:theminotaur\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\theminotaur\\theminotaur\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|solutionrelative:theminotaur\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,16 +19,12 @@
       "RelativeMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|solutionrelative:theminotaur\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\theminotaur\\theminotaur\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|solutionrelative:theminotaur\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\theminotaur\\theminotaur\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|solutionrelative:theminotaur\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\theminotaur\\theminotaur\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|solutionrelative:theminotaur\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|c:\\users\\ianfu\\desktop\\_projects\\programming\\visualstudio\\the-minotaur\\theminotaur\\theminotaur\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0CD67D04-7BEC-4FE3-9213-C48537D713B1}|TheMinotaur\\TheMinotaur.csproj|solutionrelative:theminotaur\\options.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,6 +39,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Entity.cs",
+              "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\Entity.cs",
+              "RelativeDocumentMoniker": "TheMinotaur\\Entity.cs",
+              "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\Entity.cs",
+              "RelativeToolTip": "TheMinotaur\\Entity.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAuwC4AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T15:55:57.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Cell.cs",
               "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\Cell.cs",
               "RelativeDocumentMoniker": "TheMinotaur\\Cell.cs",
@@ -51,7 +64,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Options.cs",
               "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\Options.cs",
               "RelativeDocumentMoniker": "TheMinotaur\\Options.cs",
@@ -64,52 +77,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Entity.cs",
-              "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\Entity.cs",
-              "RelativeDocumentMoniker": "TheMinotaur\\Entity.cs",
-              "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\Entity.cs",
-              "RelativeToolTip": "TheMinotaur\\Entity.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAowCQAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T18:40:48.711Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Maze.cs",
               "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\Maze.cs",
               "RelativeDocumentMoniker": "TheMinotaur\\Maze.cs",
               "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\Maze.cs",
               "RelativeToolTip": "TheMinotaur\\Maze.cs",
-              "ViewState": "AQIAAMUAAAAAAAAAAAAuwLoAAAANAAAA",
+              "ViewState": "AQIAABEBAAAAAAAAAAAAACUBAAByAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-10T18:34:04.473Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "World.cs",
               "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\World.cs",
               "RelativeDocumentMoniker": "TheMinotaur\\World.cs",
               "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\World.cs",
               "RelativeToolTip": "TheMinotaur\\World.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-10T18:29:31.348Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\Program.cs",
               "RelativeDocumentMoniker": "TheMinotaur\\Program.cs",
               "ToolTip": "C:\\Users\\ianfu\\Desktop\\_Projects\\Programming\\VisualStudio\\The-Minotaur\\TheMinotaur\\TheMinotaur\\Program.cs",
               "RelativeToolTip": "TheMinotaur\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAASAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAA5wCoAAABrAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-22T15:51:37.429Z",
               "EditorCaption": ""

@@ -12,7 +12,7 @@ namespace TheMinotaur
         private int left;
 
         private List<List<Cell>> grid; // Grid system that is used to generate the maze. This isn't representative of all the tiles the player will be able to traverse across
-        private Dictionary<string, Entity> entities; // Player, Monsters, Obstacles, and Items
+        private Dictionary<int[], Entity> entities; // Player, Monsters, Obstacles, and Items
         private char[,] tiles; // Text to be printed to the user that is generated using the above two variables
 
         public Maze()
@@ -24,7 +24,7 @@ namespace TheMinotaur
             top = rows * 2 + 1; // 2 chars for each row + the top border
             left = cols * 2 + 2; // 2 chars for each column + the left border + the newline character
             tiles = new char[top, left];
-            entities = new Dictionary<string, Entity>();
+            entities = new Dictionary<int[], Entity>();
             GenerateMaze();
             GenerateMazeTiles();
             PopulateMaze();
@@ -181,7 +181,7 @@ namespace TheMinotaur
 
                 if (tiles[t, l] == ' ')
                 {
-                    entities[t.ToString() + ", " + l.ToString()] = player;
+                    entities[[t, l]] = player;
                     running = false;
                 }
             }
@@ -264,10 +264,10 @@ namespace TheMinotaur
         {
             StringBuilder output = new StringBuilder();
 
-            foreach (KeyValuePair<string, Entity> entity in entities)
+            foreach (KeyValuePair<int[], Entity> entity in entities)
             {
-                int t = int.Parse(entity.Key.Split(", ")[0]);
-                int l = int.Parse(entity.Key.Split(", ")[1]);
+                int t = entity.Key[0];
+                int l = entity.Key[1];
                 tiles[t, l] = entity.Value.tile;
             }
 
@@ -280,6 +280,23 @@ namespace TheMinotaur
             }
 
             Console.Write(output.ToString());
+        }
+
+        public void Loop()
+        {
+            Dictionary<int[], Entity> newEntities = new Dictionary<int[], Entity>();
+
+            foreach (KeyValuePair<int[], Entity> entity in entities)
+            {
+                DataChange data = entity.Value.LoopAction();
+                if (data.coord != null)
+                {
+                    newEntities.Add([entity.Key[0] + data.coord[0], entity.Key[1] + data.coord[1]], entity.Value);
+                    tiles[entity.Key[0], entity.Key[1]] = ' ';
+                }
+            }
+
+            entities = newEntities;
         }
     }
 }
