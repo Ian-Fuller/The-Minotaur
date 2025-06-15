@@ -73,4 +73,12 @@ namespace TheMinotaur
             this.tile = tile;
         }
     }
+
+    internal class Door : Entity
+    {
+        public Door() : base()
+        {
+            this.tile = ' ';
+        }
+    }
 }

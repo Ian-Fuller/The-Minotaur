@@ -185,6 +185,12 @@ namespace TheMinotaur
                     running = false;
                 }
             }
+
+            // Place entry/exit points around maze
+            entities.Add([0, rand.Next(1, left - 1)], new Door()); // upper
+            entities.Add([top - 1, rand.Next(1, left - 1)], new Door()); // lower
+            entities.Add([rand.Next(1, top - 1), 0], new Door()); // left
+            entities.Add([rand.Next(1, top - 1), left - 2], new Door()); // right // -2 to accomodate for newline
         }
 
         // Changes the wall characters in tiles[,] so they flow with one another, instead of them all being ╬
