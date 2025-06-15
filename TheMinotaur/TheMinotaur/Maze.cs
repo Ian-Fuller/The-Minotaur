@@ -282,21 +282,39 @@ namespace TheMinotaur
             Console.Write(output.ToString());
         }
 
-        public void Loop()
+        public char Loop()
         {
             Dictionary<int[], Entity> newEntities = new Dictionary<int[], Entity>();
+            char playerInput = ' ';
 
             foreach (KeyValuePair<int[], Entity> entity in entities)
             {
                 DataChange data = entity.Value.LoopAction();
-                if (data.coord != null)
+
+                if (data.playerInput != null)
                 {
-                    newEntities.Add([entity.Key[0] + data.coord[0], entity.Key[1] + data.coord[1]], entity.Value);
+                    playerInput = data.playerInput;
+                }
+
+                if (data.move != null)
+                {
+                    int newTop = entity.Key[0] + data.move[0];
+                    int newLeft = entity.Key[1] + data.move[1];
+                    if (tiles[newTop, newLeft] == ' ')
+                    {
+                        newEntities.Add([newTop, newLeft], entity.Value);
+                    }
+                    else
+                    {
+                        newEntities.Add(entity.Key, entity.Value);
+                    }
                     tiles[entity.Key[0], entity.Key[1]] = ' ';
                 }
             }
 
             entities = newEntities;
+
+            return playerInput;
         }
     }
 }

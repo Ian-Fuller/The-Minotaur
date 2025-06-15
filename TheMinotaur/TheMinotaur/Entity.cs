@@ -4,7 +4,8 @@ namespace TheMinotaur
 {
     internal struct DataChange
     {
-        public int[] coord;
+        public char playerInput;
+        public int[] move;
     }
 
     internal class Entity
@@ -27,25 +28,25 @@ namespace TheMinotaur
         {
             DataChange data = new DataChange();
 
-            char input = Console.ReadKey().KeyChar;
-            switch(input)
+            data.playerInput = Console.ReadKey().KeyChar;
+            switch(data.playerInput)
             {
                 case 'w':
-                    data.coord = [-1, 0];
+                    data.move = [-1, 0];
                     break;
                 case 'a':
-                    data.coord = [0, -1];
+                    data.move = [0, -1];
                     break;
                 case 's':
-                    data.coord = [1, 0];
+                    data.move = [1, 0];
                     break;
                 case 'd':
-                    data.coord = [0, 1];
+                    data.move = [0, 1];
                     break;
                 case 'h': // Open manual
                     break;
-                case 'x': // Exit game state, returning to main menu
-                    Program.ExitGame();
+                case 'x': // Pause the game
+                    // Do nothing. The loop() function in Maze.cs will handle this
                     break;
                 default:
                     break;

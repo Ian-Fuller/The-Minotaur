@@ -18,14 +18,12 @@ namespace TheMinotaur
 
     public class Program
     {
-        static bool running;
-        static bool gameLoop;
-        static State programState;
+        // These variables are class members, rather than inside the main() function because the player Entity needs to be able to access them easily
 
         static void Main(string[] args)
         {
-            running = true;
-            programState = State.MainMenu;
+            bool running = true;
+            State programState = State.MainMenu;
 
             while (running)
             {
@@ -33,15 +31,39 @@ namespace TheMinotaur
                 switch (programState)
                 {
                     case State.Game:
-                        World gameWorld = new World();
-                        gameLoop = true;
-                        while (gameLoop)
                         {
-                            Console.SetCursorPosition(0, 0);
-                            gameWorld.currentMap.PrintMaze();
+                            World gameWorld = new World();
+                            bool gameLoop = true;
+                            while (gameLoop)
+                            {
+                                Console.SetCursorPosition(0, 0);
+                                gameWorld.currentMap.PrintMaze();
 
-                            // This block doesn't get player input, as thet is handled by the player object
-                            gameWorld.currentMap.Loop();
+                                char playerInput = gameWorld.currentMap.Loop();
+                                if (playerInput == 'x')
+                                {
+                                    gameLoop = false;
+                                }
+                            }
+
+                            Console.Write("-= GAME PAUSED =-\nPlay Game (Continue) (p)\nOptions (o)\nOpen Manual (h)\nExit to Main Menu (x)\n");
+                            char input = Console.ReadKey().KeyChar;
+                            switch (input)
+                            {
+                                case 'p': // Enter Game state
+                                    // Do nothing
+                                    break;
+                                case 'o': // Enter Option state
+                                    programState = State.Options;
+                                    break;
+                                case 'h': // Open manual
+                                    break;
+                                case 'x': // Set running = false
+                                    programState = State.MainMenu;
+                                    break;
+                                default:
+                                    break;
+                            }
                         }
                         break;
                     case State.MainMenu:
@@ -84,12 +106,6 @@ namespace TheMinotaur
                         break;
                 }
             }
-        }
-
-        public static void ExitGame()
-        {
-            programState = State.MainMenu;
-            gameLoop = false;
         }
     }
 }
