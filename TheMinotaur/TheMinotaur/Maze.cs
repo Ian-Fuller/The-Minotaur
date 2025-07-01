@@ -1,5 +1,6 @@
 ﻿using System.Linq.Expressions;
 using System.Numerics;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace TheMinotaur
@@ -8,12 +9,12 @@ namespace TheMinotaur
     {
         private int rows;
         private int cols;
-        private int top;
-        private int left;
+        public int top;
+        public int left;
 
         private List<List<Cell>> grid; // Grid system that is used to generate the maze. This isn't representative of all the tiles the player will be able to traverse across
-        private Dictionary<int[], Entity> entities; // Player, Monsters, Obstacles, and Items
-        private char[,] tiles; // Text to be printed to the user that is generated using the above two variables
+        public Dictionary<int[], Entity> entities; // Player, Monsters, Obstacles, and Items
+        public char[,] tiles; // Text to be printed to the user that is generated using the above two variables
 
         public Maze()
         {
@@ -169,22 +170,7 @@ namespace TheMinotaur
         // Fills tiles[,] with structures and entities
         private void PopulateMaze()
         {
-            Player player = new Player();
-
             Random rand = new Random();
-
-            bool running = true;
-            while (running)
-            {
-                int t = (rand.Next(0, top));
-                int l = (rand.Next(0, left));
-
-                if (tiles[t, l] == ' ')
-                {
-                    entities[[t, l]] = player;
-                    running = false;
-                }
-            }
 
             // Place entry/exit points around maze
             entities.Add([0, rand.Next(1, left - 1)], new Door()); // upper
@@ -288,7 +274,7 @@ namespace TheMinotaur
             Console.Write(output.ToString());
         }
 
-        public char Loop()
+        public char Loop(World world)
         {
             Dictionary<int[], Entity> newEntities = new Dictionary<int[], Entity>();
             char playerInput = ' ';
@@ -306,16 +292,30 @@ namespace TheMinotaur
                 {
                     int newTop = entity.Key[0] + data.move[0];
                     int newLeft = entity.Key[1] + data.move[1];
-                    if (tiles[newTop, newLeft] == ' ')
+                    try
                     {
-                        newEntities.Add([newTop, newLeft], entity.Value);
+                        if (tiles[newTop, newLeft] == ' ')
+                        {
+                            newEntities.Add([newTop, newLeft], entity.Value);
+                        }
+                        else if (tiles[newTop, newLeft] == '\n') // for handling Eastern doors, which have a newline character to their right. An exception will be thrown to mimic the index out of bounds exception
+                        {
+                            throw new Exception();
+                        }
+                        else
+                        {
+                            newEntities.Add(entity.Key, entity.Value);
+                        }
+                        tiles[entity.Key[0], entity.Key[1]] = ' ';
                     }
-                    else
+                    catch (Exception e)
                     {
-                        newEntities.Add(entity.Key, entity.Value);
+                        entities.Remove(entity.Key);
+                        world.ChangeMap(entity);
                     }
-                    tiles[entity.Key[0], entity.Key[1]] = ' ';
                 }
+
+
             }
 
             entities = newEntities;

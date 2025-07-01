@@ -1,8 +1,9 @@
 ﻿/*
 TO-DO:
  - (DONE) Learn out how to generate mazes
- - Create entities and the player
- - Write PopulateMaze()
+ - (IN PROGRESS) Create entities and the player
+ - (IN PROGRESS) Write PopulateMaze()
+ - Enable travel between mazes (currently possible, but the player doesn't travel to the correct maze, and doesn't start in the location of the respective door)
  - Add a Structure class
  - Make CleanMaze() more efficient
 */
@@ -39,7 +40,7 @@ namespace TheMinotaur
                                 Console.SetCursorPosition(0, 0);
                                 gameWorld.currentMap.PrintMaze();
 
-                                char playerInput = gameWorld.currentMap.Loop();
+                                char playerInput = gameWorld.Loop();
                                 if (playerInput == 'x')
                                 {
                                     gameLoop = false;
