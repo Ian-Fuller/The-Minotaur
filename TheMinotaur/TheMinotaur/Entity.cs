@@ -1,5 +1,7 @@
 ﻿// Entities could use functions such as LoopAction(), InteractAction(), and PlayerInRange()
 
+using System.ComponentModel;
+
 namespace TheMinotaur
 {
     internal struct DataChange
@@ -71,14 +73,6 @@ namespace TheMinotaur
         public Item(char tile) : base()
         {
             this.tile = tile;
-        }
-    }
-
-    internal class Door : Entity
-    {
-        public Door() : base()
-        {
-            this.tile = ' ';
         }
     }
 }

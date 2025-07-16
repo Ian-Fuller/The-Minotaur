@@ -3,9 +3,10 @@ TO-DO:
  - (DONE) Learn out how to generate mazes
  - (IN PROGRESS) Create entities and the player
  - (IN PROGRESS) Write PopulateMaze()
- - Enable travel between mazes (currently possible, but the player doesn't travel to the correct maze, and doesn't start in the location of the respective door)
+ - Enable travel between mazes (player travels to the correct maze, but does not appear in the doorway, and the game encounters the loop bug)
  - Add a Structure class
  - Make CleanMaze() more efficient
+ - Fix the bug where the program loops infintely and doesn't accept input
 */
 
 namespace TheMinotaur

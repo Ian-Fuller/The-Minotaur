@@ -130,6 +130,7 @@ namespace TheMinotaur
         private void GenerateMazeTiles()
         {
             StringBuilder output = new StringBuilder();
+            Random rand = new Random();
 
             // Upper border
             output.Append("█");
@@ -165,18 +166,18 @@ namespace TheMinotaur
                     tiles[t, l] = output[i++]; 
                 }
             }
+
+            // Add entry/exit points
+            tiles[0, rand.Next(1, left - 1)] = ' ';
+            tiles[top - 1, rand.Next(1, left - 1)] = ' ';
+            tiles[rand.Next(1, top - 1), 0] = ' ';
+            tiles[rand.Next(1, top - 1), left - 2] = ' ';
         }
 
         // Fills tiles[,] with structures and entities
         private void PopulateMaze()
         {
             Random rand = new Random();
-
-            // Place entry/exit points around maze
-            entities.Add([0, rand.Next(1, left - 1)], new Door()); // upper
-            entities.Add([top - 1, rand.Next(1, left - 1)], new Door()); // lower
-            entities.Add([rand.Next(1, top - 1), 0], new Door()); // left
-            entities.Add([rand.Next(1, top - 1), left - 2], new Door()); // right // -2 to accomodate for newline
         }
 
         // Changes the wall characters in tiles[,] so they flow with one another, instead of them all being ╬
@@ -271,7 +272,7 @@ namespace TheMinotaur
                 }
             }
 
-            Console.Write(output.ToString());
+            Console.Write("\n" + output.ToString());
         }
 
         public char Loop(World world)
@@ -308,14 +309,31 @@ namespace TheMinotaur
                         }
                         tiles[entity.Key[0], entity.Key[1]] = ' ';
                     }
-                    catch (Exception e)
+                    catch (Exception)
                     {
+                        Console.WriteLine($"\n{newTop}, {newLeft}");
+                        int[] moveDir = [0, 0];
+                        if (newTop == -1) // Up
+                        {
+                            moveDir = [0, 1]; // Switch to an x, y system
+                        }
+                        else if (newTop == top) // Down
+                        {
+                            moveDir = [0, -1];
+                        }
+                        else if (newLeft == -1) // Left
+                        {
+                            moveDir = [-1, 0];
+                        }
+                        else if (newLeft == left-1) // Right
+                        {
+                            moveDir = [1, 0];
+                        }
+
                         entities.Remove(entity.Key);
-                        world.ChangeMap(entity);
+                        world.ChangeMap(entity, moveDir);
                     }
                 }
-
-
             }
 
             entities = newEntities;

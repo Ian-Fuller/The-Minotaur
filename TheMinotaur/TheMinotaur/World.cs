@@ -42,14 +42,10 @@ namespace TheMinotaur
             return currentMap.Loop(this);
         }
 
-        public void ChangeMap(KeyValuePair<int[], Entity> player)
+        public void ChangeMap(KeyValuePair<int[], Entity> player, int[] moveDir)
         {
-            Console.WriteLine($"{player.Key[0]}, {player.Key[1]}");
-            int moveX = player.Key[1] == 0 ? -1 : 1; // X uses the second index because the key value pair uses a top left system
-            int moveY = player.Key[0] == 0 ? -1 : 1;
-
-            mapX += moveX;
-            mapY += moveY;
+            mapX += moveDir[0];
+            mapY += moveDir[1];
             if (maps.ContainsKey($"{mapX}, {mapY}"))
             {
                 currentMap = maps[$"{mapX}, {mapY}"];
