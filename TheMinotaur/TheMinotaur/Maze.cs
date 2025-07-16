@@ -129,6 +129,9 @@ namespace TheMinotaur
         // Uses the data created by GenrateMaze() to create a map of tiles that can be displayed to the player so they can move around in it
         private void GenerateMazeTiles()
         {
+            Console.Clear();
+            Console.WriteLine("Generating Maze...");
+
             StringBuilder output = new StringBuilder();
             Random rand = new Random();
 
@@ -177,12 +180,18 @@ namespace TheMinotaur
         // Fills tiles[,] with structures and entities
         private void PopulateMaze()
         {
+            Console.Clear();
+            Console.WriteLine("Generating Maze...");
+
             Random rand = new Random();
         }
 
         // Changes the wall characters in tiles[,] so they flow with one another, instead of them all being ╬
         private void CleanMaze()
         {
+            Console.Clear();
+            Console.WriteLine("Generating Maze...");
+
             char[] boxDrawing = 
             {
                 ' ', //  0 - none (shouldn't be possible)
@@ -272,7 +281,7 @@ namespace TheMinotaur
                 }
             }
 
-            Console.Write("\n" + output.ToString());
+            Console.Write(output.ToString());
         }
 
         public char Loop(World world)
@@ -311,11 +320,11 @@ namespace TheMinotaur
                     }
                     catch (Exception)
                     {
-                        Console.WriteLine($"\n{newTop}, {newLeft}");
+                        // top, left, to x, y
                         int[] moveDir = [0, 0];
                         if (newTop == -1) // Up
                         {
-                            moveDir = [0, 1]; // Switch to an x, y system
+                            moveDir = [0, 1];
                         }
                         else if (newTop == top) // Down
                         {
@@ -331,6 +340,7 @@ namespace TheMinotaur
                         }
 
                         entities.Remove(entity.Key);
+                        tiles[entity.Key[0], entity.Key[1]] = ' ';
                         world.ChangeMap(entity, moveDir);
                     }
                 }
@@ -339,6 +349,54 @@ namespace TheMinotaur
             entities = newEntities;
 
             return playerInput;
+        }
+
+        public void PlacePlayer(KeyValuePair<int[], Entity> player, int[] moveDir)
+        {
+            // Use moveDir to determine what edge the player should be placed on
+            // Loop across that edge until a space is found
+
+            // x, y to top, left
+            if (moveDir[1] == 1) // player is moving in from the top, and needs to be placed on the bottom
+            {
+                for (int i = 0; i < left-1; i++)
+                {
+                    if (tiles[top-1, i] == ' ')
+                    {
+                        entities.Add([top-1, i], player.Value);
+                    }
+                }
+            }
+            else if (moveDir[1] == -1) // bottom to top
+            {
+                for (int i = 0; i < left-1; i++)
+                {
+                    if (tiles[0, i] == ' ')
+                    {
+                        entities.Add([0, i], player.Value);
+                    }
+                }
+            }
+            else if (moveDir[0] == -1) // left to right
+            {
+                for (int i = 0; i < top-1; i++)
+                {
+                    if (tiles[i, left-2] == ' ')
+                    {
+                        entities.Add([i, left-2], player.Value);
+                    }
+                }
+            }
+            else if (moveDir[0] == 1) // right to left
+            {
+                for (int i = 0; i < top-1; i++)
+                {
+                    if (tiles[i, 0] == ' ')
+                    {
+                        entities.Add([i, 0], player.Value);
+                    }
+                }
+            }
         }
     }
 }

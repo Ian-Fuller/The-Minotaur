@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TheMinotaur")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd52c81187ad52e77035e92e13c8c88e0193168b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b1c6770e3d78b13546dd9a1d4a5c7ca04a8d341")]
 [assembly: System.Reflection.AssemblyProductAttribute("TheMinotaur")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TheMinotaur")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

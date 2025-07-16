@@ -29,9 +29,8 @@ namespace TheMinotaur
         public override DataChange LoopAction() // String is used to return data to the maze class, so it can act on it
         {
             DataChange data = new DataChange();
-
-            data.playerInput = Console.ReadKey().KeyChar;
-            switch(data.playerInput)
+            data.playerInput = Console.ReadKey(true).KeyChar;
+            switch (data.playerInput)
             {
                 case 'w':
                     data.move = [-1, 0];

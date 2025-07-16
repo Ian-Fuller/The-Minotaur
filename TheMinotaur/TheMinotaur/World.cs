@@ -49,13 +49,13 @@ namespace TheMinotaur
             if (maps.ContainsKey($"{mapX}, {mapY}"))
             {
                 currentMap = maps[$"{mapX}, {mapY}"];
+                currentMap.PlacePlayer(player, moveDir);
             }
             else
             {
                 currentMap = new Maze();
                 maps.Add($"{mapX}, {mapY}", currentMap);
-                // calculate player location in new maze
-                currentMap.entities.Add([player.Key[0], player.Key[1]], player.Value);
+                currentMap.PlacePlayer(player, moveDir);
             }
         }
     }
